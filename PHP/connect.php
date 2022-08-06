@@ -1,6 +1,6 @@
 <?php
     header("Content-Type:text/html;charset=utf8");
-    $conn = mysqli_connect("localhost", "mysql", "wacyty3y4310918");
+    $conn = mysqli_connect("110.42.215.35", "mysql", "wacyty3y4310918");
     mysqli_select_db($conn, 'soting_cartoon_user');
     mysqli_set_charset($conn, 'utf8');
 
