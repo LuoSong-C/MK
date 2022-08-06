@@ -1,0 +1,251 @@
+/* 头部导航栏 */
+
+.main nav {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    box-sizing: border-box;
+    line-height: 70px;
+    padding: 10px 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    height: 50px;
+    width: 130px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(0, 255, 255);
+    color: rgba(255, 255, 255, .9);
+    text-shadow: 1px 1px rgba(0, 0, 0, .3);
+    border-radius: 25px;
+    transition: background-color .3s linear;
+    cursor: pointer;
+    transition: border .2s linear;
+    border-top: 2px solid transparent;
+}
+
+nav ul li::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 2px;
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* 印章 */
+
+.seal {
+    position: absolute;
+    top: 5px;
+    left: 110px;
+    z-index: 10001;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 28px;
+    background-image: linear-gradient(to top, red, rgb(248, 168, 168));
+    color: #fff;
+    transform: rotate(30deg);
+    transition: left .3s linear;
+}
+
+/* 主体内容 */
+
+.main_content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_content .week_grid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.week_grid .top {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.week_grid .top::before {
+    content: '';
+    height: 30px;
+    width: 6px;
+    border-radius: 3px;
+    margin: 5px 5px 5px 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* background-image: linear-gradient(to bottom right, rgb(255, 166, 0), rgb(255, 123, 0)); */
+}
+
+.week_grid .top::after {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    box-sizing: border-box;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 2px dotted rgb(214, 205, 205);
+}
+
+.week_grid .content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.content li {
+    flex: 20%;
+    display: flex;
+    position: relative;
+    height: 350px;
+    padding: 10px 30px;
+}
+
+.content li .b1 {
+    position: absolute;
+    top: 290px;
+    left: 210px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 255, 234, .9);
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.b1 img {
+    width: 70%;
+    /* height: 100%; */
+}
+
+.content li .b2 {
+    position: absolute;
+    top: 285px;
+    left: 32px;
+    width: 2px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: rgba(255, 0, 106, .9);
+    cursor: pointer;
+}
+
+.content li a {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    width: 220px;
+    height: 330px;
+    overflow: hidden;
+}
+
+.content li a img {
+    flex: 10;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content li a p {
+    flex: 1;
+    padding: 5px 5px 0 15px;
+    font-size: 14px;
+    background-color: rgb(248, 247, 247);
+}
+
+.content li a .time {
+    font-size: 10px;
+    color: rgb(136, 136, 136);
+}
+
+/* 底部信息栏 */
+
+.main footer {
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* width: calc(100% - 20px); */
+    /* margin-top: 400px; */
+    height: 150px;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* 回到顶部 */
+
+.toTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(to bottom, rgba(0, 255, 157, 0.658), rgba(109, 184, 255, 0.685));
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.toTop::before {
+    content: ' ';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 31px;
+    height: 31px;
+    transform: rotate(45deg);
+    border: 5px solid #fff;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 5px;
+    /* 看起来更加的圆润 */
+    box-sizing: border-box;
+}
+
+.toTop::after {
+    content: ' ';
+    position: absolute;
+    top: 20px;
+    left: 33px;
+    display: block;
+    width: 5px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.copyright {
+    margin-top: 10px;
+}

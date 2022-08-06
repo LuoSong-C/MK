@@ -1,0 +1,75 @@
+.list_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.list_content .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    border-bottom: 2px solid #eee;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 6px;
+}
+
+.top .name {
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 2px solid #000;
+    /* border-radius: 6px 0 0 6px; */
+    /* border: 2px solid #000; */
+}
+
+.top .new {
+    flex: 2;
+    text-align: center;
+}
+
+.list_content .main_content {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 4px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.list_content .main_content:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.main_content .fName {
+    flex: 1;
+    display: flex;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    border-right: 1px solid #000;
+}
+
+.main_content .fNew {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.fNew a {
+    text-decoration: underline;
+    color: skyblue;
+}
+
+.fNew a:hover {
+    color: tomato;
+}

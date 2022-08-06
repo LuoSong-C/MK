@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录-SoTing_CARTOON</title>
+    <link rel="shortcut icon" href="sitcat.ico">
+    <link rel="stylesheet" href="CSS/Initialize.css">
+    <link rel="stylesheet" href="CSS/copyright.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <script type="text/javascript">
+        window.onload = function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = 'https://www.soting.fun/MOBILE/M_index.html';
+            } else {
+
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <!-- 注册 -->
+    <section>
+        <img src="IMAGES/login.jpg" alt="">
+        <form action="PHP/login.php" method="post">
+            <div>
+                <h1>填写登录信息</h1>
+                <h3><a href="register.html">去注册</a></h3>
+                <h3><a href="index.html">首页</a></h3>
+            </div>
+            <input type="text" placeholder="登录邮箱" name="email" required oninvalid="setCustomValidity('请输入登录名')"
+                oninput="setCustomValidity('')">
+            <input type="password" placeholder="密码" name="password" required oninvalid="setCustomValidity('请输入密码')"
+                oninput="setCustomValidity('')">
+            <img src='IMAGES/close.png' class="eyes" alt="">
+
+            <input type="submit" value="登录">
+        </form>
+    </section>
+
+    <div class="copyright">
+        <a href="https://www.soting.fun">Copyright © 2021 soting.fun SiTomg</a>
+    </div>
+
+    <script src="JS/common.js"></script>
+    <script src="JS/login.js"></script>
+
+</body>
+
+</html>

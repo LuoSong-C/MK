@@ -1,0 +1,456 @@
+body {
+    background-color: rgb(123, 255, 244);
+}
+
+/* 头像以及个人信息修改栏 */
+.headImg, .changeInfo {
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    z-index: 10001;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+}
+
+.bigImg, .sure {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    display: none;
+    z-index: 10004;
+    overflow: hidden;
+    transform: translate(-50%, 0);
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
+}
+
+.sure {
+    height: 50px;
+    top: 750px;
+    /* display: block; */
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    /* line-height: 50px; */
+}
+
+.sure button {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    background-color: aqua;
+    font-size: 16px;
+    font-weight: 800;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+}
+
+.headImg .Img {
+    width: 240px;
+    height: 240px;
+    border-radius: 250px;
+    border: 2px solid #eee;
+    overflow: hidden;
+    margin-top: 10px;
+    line-height: 240px;
+}
+
+.Img .showImg {
+    width: 100%;
+}
+
+.headImg form, .changeInfo form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.headImg .select_btn, .headImg .sub {
+    width: 80px;
+    height: 30px;
+    background-color: rgb(123, 255, 244);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    transition: box-shadow .5s ease-in-out;
+    text-align: center;
+}
+
+.headImg .select_btn:hover, .headImg .sub:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.changeInfo {
+    right: 0;
+    left: 20px;
+}
+
+.changeInfo p, .headImg p {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.changeInfo form {
+    flex-direction: column;
+}
+
+.changeInfo input {
+    box-sizing: border-box;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(226, 226, 226);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.close, .close_info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 8px 10.5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.close div:nth-child(1), .close_info div:nth-child(1) {
+    float: left;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+    border-top: 2px solid rgb(255, 0, 0);
+    border-right: 2px solid rgb(255, 0, 0);
+}
+
+.close div:nth-child(2), .close_info div:nth-child(2) {
+    float: right;
+    width: 11px;
+    height: 11px;
+    transform: rotate(-45deg);
+    border-top: 2px solid rgb(255, 0, 0);
+    border-left: 2px solid rgb(255, 0, 0);
+}
+
+/* 主页面 */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+    margin: 100px auto;
+    box-sizing: border-box;
+    width: 1000px;
+    height: 700px;
+    border-radius: 20px;
+    border: 2px solid #eee;
+    background-color: rgba(255, 255, 255, .9);
+    overflow: hidden;
+    padding: 50px 50px 50px 200px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    transform-style: preserve-3d;
+}
+
+/* 登录注册快捷按钮 */
+.link {
+    position: absolute;
+    top: 500px;
+    right: 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    box-shadow: -2px 0 2px rgba(0, 0, 0, .5);
+    background-color: aqua;
+    transition: all .5s ease-in-out;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.link:hover {
+    transform: rotateY(-45deg);
+    transform: translate(3px, 0);
+    box-shadow: -10px 0 6px rgba(0, 0, 0, .5);
+    /* border: 1px solid #fff; */
+}
+
+/* 注册登录按钮 */
+
+.link_login, .link_register {
+    position: absolute;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background-color: aqua;
+    line-height: 58px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    /* box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5); */
+    border: 2px solid rgb(236, 236, 236);
+    transition: box-shadow .5s ease-in-out, color .5s ease-in-out;
+}
+
+.link_login {
+    top: 450px;
+}
+
+.link_register {
+    top: 560px;
+}
+
+.link_login:hover, .link_register:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .9);
+}
+
+section .logo {
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    z-index: 10000;
+    width: 100px;
+    height: 90px;
+    border-radius: 25px;
+}
+
+.logo>a, .logo>a>img {
+    width: 100%;
+    height: 100%;
+}
+
+section nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 700px;
+    background-color: rgba(88, 166, 255, 0.74);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .5);
+}
+
+nav .tag {
+    position: relative;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    width: 230px;
+    transform: translate(0, -50%);
+}
+
+.tag img {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    transition: top .5s ease-in-out;
+}
+
+.tag div {
+    display: flex;
+    width: 230px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    background-image: linear-gradient(to left, #dee, #fff);
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0px 0px 15px rgba(66, 132, 255, 0.5);
+    cursor: pointer;
+    transition: box-shadow .5s ease-in-out;
+}
+
+section .userinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transition: display .5s ease-in-out;
+}
+
+.userinfo .images {
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    padding: 30px 100px;
+}
+
+.images img {
+    height: 238px;
+    width: 238px;
+    box-sizing: border-box;
+    border-radius: 119px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow .5s ease-in-out;
+    cursor: pointer;
+}
+
+.images img:hover {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .5);
+}
+
+.userinfo>div {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+
+}
+
+/* section div p {
+    border-bottom: 2px solid #000;
+} */
+
+.userinfo div span {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 30px;
+    /* border-bottom: 1px dotted rgb(255, 206, 206); */
+}
+
+.userinfo .button {
+    height: 36px;
+    width: 100px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    border: 1px solid #ccc;
+    margin: 0 100px 0 100px;
+    background-color: rgb(0, 255, 242);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18px;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.userinfo .button:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .9);
+}
+
+section .subscription_out {
+    width: 100%;
+    display: none;
+    box-sizing: border-box;
+    padding-left: 40px;
+    overflow: auto;
+}
+
+.nologin {
+    display: block;
+    margin: 100px 100px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.nologin a {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.nologin a:hover {
+    color: tomato;
+}
+
+.subscription {
+    display: none;
+}
+
+.subscription .top {
+    height: 26px;
+}
+
+.top .left {
+    float: left;
+    box-sizing: border-box;
+    height: 100%;
+    width: 197px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    border-right: 2px solid rgb(255, 114, 114);
+}
+
+.top .right {
+    float: left;
+    height: 100%;
+    width: calc(100% - 197px);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.subscription>div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.subscription .name {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.subscription .release {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-weight: 800;
+}
+
+.release .content {
+    display: flex;
+}
+
+.release a {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.release a:hover {
+    color: tomato;
+}

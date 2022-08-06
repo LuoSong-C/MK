@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>个人信息)SoTing_CARTOON</title>
+    <link rel="shortcut icon" href="sitcat.ico">
+    <link rel="stylesheet" href="CSS/Initialize.css">
+    <link rel="stylesheet" href="CSS/copyright.css">
+    <link rel="stylesheet" href="CSS/cropper.css">
+    <link rel="stylesheet" href="CSS/userinfo.css">
+    <script type="text/javascript">
+        window.onload = function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = 'https://www.soting.fun/MOBILE/M_index.html';
+            } else {
+
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <!-- 头像修改栏 -->
+    <div class="headImg">
+        <p>修改头像</p>
+        <div class="Img">
+            <img src="UPLOADS/noImg.png" alt="user header images..." class="showImg"></img>
+        </div>
+        <form action="PHP/headChange.php" method="post" enctype="multipart/form-data">
+            <input type="button" value="选择头像" class="select_btn"
+                onclick="document.querySelector('#changeHeade').click();" />
+            <input id="changeHeade" type="file" name="file" onchange="previewFile()"
+                accept="image/png, image/jpg, image/jpeg" style="display: none;"><br>
+            <input type="text" name="img" class="baseImg" style="display:none;">
+            <input type="submit" name="submit" value="提交" class="sub">
+        </form>
+        <div class="close">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- 头像选择显示栏 -->
+    <div class="bigImg">
+        <img src="" alt="" id="cropImg">
+    </div>
+
+    <!-- 确定 -->
+    <div class="sure">
+        <button>确定</button>
+    </div>
+
+    <!-- 个人信息修改栏 -->
+    <div class="changeInfo">
+        <p>修改个人信息</p>
+        <form action="PHP/infoChange.php" method="post">
+            <input type="text" placeholder="用户名" name="username" required oninvalid="setCustomValidity('请输入用户名')"
+                oninput="setCustomValidity('')">
+            <input type="tel" placeholder="电话" name="tel" required oninvalid="setCustomValidity('请输入电话')"
+                oninput="setCustomValidity('')">
+            <input type="text" placeholder="性别(男/女/不愿透露)" name="sex" required oninvalid="setCustomValidity('请输入性别')"
+                oninput="setCustomValidity('')">
+            <input type="text" placeholder="个人介绍(60字内)" name="intro" required oninvalid="setCustomValidity('输入简介')"
+                oninput="setCustomValidity('')">
+            <input type="submit" value="提交" class="sub">
+        </form>
+        <div class="close_info">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- 主页面 -->
+    <section>
+        <div class="logo">
+            <a href="index.html"><img src="IMAGES/logo.png" alt=""></a>
+        </div>
+        <!-- 登陆注册链接 -->
+        <div class="link">
+            ⇦
+        </div>
+        <div class="link_login">
+            <a href="login.html">登录</a>
+        </div>
+        <div class="link_register">
+            <a href="register.html">注册</a>
+        </div>
+        <nav>
+            <div class="tag">
+                <img src="IMAGES/cat.png" alt="cat.png">
+                <div>个人信息</div>
+                <div>我的订阅</div>
+            </div>
+        </nav>
+        <div class="userinfo">
+            <div class="images">
+                <img src="UPLOADS/noImg.png" alt="" title="修改头像">
+            </div>
+            <div>
+                <p>用户名：</p><span class="username">我该怎么称呼主人呢</span>
+            </div>
+            <div>
+                <p>邮&ensp;&ensp;箱：</p><span class="email">探索中...</span>
+            </div>
+            <div>
+                <p>电&ensp;&ensp;话：</p><span class="tel">sitcat还不知道哦(未设置)</span>
+            </div>
+            <div>
+                <p>性&ensp;&ensp;别：</p><span class="sex">主人为什么不愿意透露呢(未设置)</span>
+            </div>
+            <div>
+                <p>简&ensp;&ensp;介：</p><span class="intro">主人不要懒了(未设置)</span>
+            </div>
+            <div>
+                <form action="PHP/exit.php" method="post">
+                    <input type="submit" value="退出登录" id="quiet" class="button" name="submit" style="cursor: pointer;">
+                </form>
+                <button id="changeIn" class="button">修改信息</button>
+            </div>
+        </div>
+        <div class="subscription_out">
+            <div class="nologin">请 <a href="login.html">登录</a> 后查看</div>
+            <div class="subscription">
+                <div class="top">
+                    <div class="left">
+                        订阅番组
+                    </div>
+                    <div class="right">
+                        更新动态
+                    </div>
+                </div>
+                <div>
+                    <div class="name">
+                        关于我转生成史莱姆
+                    </div>
+                    <div class="release">
+                        <div class="content">
+                            关于我转生成史莱姆这档事 01，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.25
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="name">
+                        咒术回战
+                    </div>
+                    <div class="release">
+                        <div class="content">
+                            咒术回战 01-24，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.01
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="name">
+                        鬼灭之刃-无限列车
+                    </div>
+                    <div class="release">
+                        <div class="content">
+                            鬼灭之刃-无限列车 01，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.23
+                        </div>
+                        <div class="content">
+                            鬼灭之刃 OVA，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.07
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="name">
+                        放逐慢活
+                    </div>
+                    <div class="release">
+                        <div class="content">
+                            放逐慢活 05，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.24
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="name">
+                        国王排名
+                    </div>
+                    <div class="release">
+                        <div class="content">
+                            国王排名 06，<a href="#">下载地址</a>。&ensp;&ensp;- 2021.11.22
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <div class="copyright">
+        <a href="https://www.soting.fun">Copyright © 2021 soting.fun SiTomg</a>
+    </div>
+
+    <script src="JS/common.js"></script>
+    <script src="JS/cropper.js"></script>
+    <script src="JS/userinfo.js"></script>
+
+</body>
+
+</html>

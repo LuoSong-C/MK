@@ -1,0 +1,231 @@
+/* 版心 */
+
+.center {
+    width: 1400px;
+    margin: 0 auto;
+    /* background-color: #ccc; */
+}
+
+/* body */
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    /* -webkit-background-size: cover;
+    /* 兼容Webkit内核浏览器如Chrome和Safari 
+    -o-background-size: cover; */
+    /* 兼容Opera */
+    zoom: 1;
+}
+
+/* 主界面大小 */
+
+.main {
+    position: relative;
+    width: 1901px;
+    margin: 0 auto;
+    /* height: 1000px; */
+    /* background-color: rgb(223, 248, 248); */
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+
+/* 头部信息 */
+
+.main header {
+    display: flex;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+}
+
+header .logo {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 64px;
+    /* margin-right: 20px; */
+}
+
+header .search {
+    flex: 10;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 40px;
+}
+
+.search::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 70px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 4px solid rgb(211, 206, 206);
+}
+
+.search::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    right: 72px;
+    transform: rotate(-33deg);
+    width: 4px;
+    height: 15px;
+    border-radius: 2px;
+    background-color: rgb(211, 206, 206);
+}
+
+.search input {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: 2px solid #eee;
+    padding: 10px 100px 10px 25px;
+    font-size: 16px;
+    align-items: center;
+}
+
+header .timer {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid tomato;
+    border-left-color: tomato;
+    border-right-color: tomato;
+}
+
+.timer span {
+    flex: 10;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.timer .Ge {
+    flex: 2;
+    box-sizing: border-box;
+}
+
+.timer .shu {
+    flex: 4;
+    font-weight: 800;
+}
+
+.timer .second {
+    flex: 7;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    margin-left: 10px;
+}
+
+header>span {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+header .info {
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.info img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 分割线 */
+
+.main .parting {
+    display: block;
+    width: 98%;
+    height: 5px;
+    margin: 10px auto;
+    /* margin-bottom: 5px; */
+}
+
+.parting span {
+    float: left;
+    /* display: inline-block; */
+    width: 10%;
+    height: 4px;
+    border-radius: 2px;
+    /* background-color: black; */
+}
+
+/* 广告资讯栏 */
+
+.main .ad {
+    position: relative;
+    height: 150px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all .3s linear;
+}
+
+.ad .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 30px;
+    background-color: chocolate;
+    border-radius: 20px;
+    padding: 8px 10.5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ad .close div:nth-child(1) {
+    float: left;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.ad .close div:nth-child(2) {
+    float: right;
+    width: 11px;
+    height: 11px;
+    transform: rotate(-45deg);
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+}

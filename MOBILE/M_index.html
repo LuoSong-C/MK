@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>SoTing_CARTOON</title>
+    <link rel="shortcut icon" href="../sitcat.ico">
+    <link rel="stylesheet" href="../CSS/Initialize.css">
+    <!-- <link rel="stylesheet" href="../CSS/copyright.css"> -->
+    <link rel="stylesheet" href="CSS/M_index.css">
+    <script type="text/javascript">
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+        } else {
+            window.location.href = 'https://www.soting.fun/index.html';
+        };
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- 侧边导航栏 -->
+        <div class="sidenav">
+            <div class="headimg"><img src="../UPLOADS/noImg.png" alt=""></div>
+            <div class="home">主页</div>
+            <div class="info">个人信息</div>
+            <div class="list">列表</div>
+            <div class="subscription">订阅</div>
+            <div class="erweima">
+                <img src="../IMAGES/ma.png" alt="ma.png" title="联系我">
+            </div>
+            <button class="regi">注册</button>
+            <button class="logi">登录</button>
+            <button class="out" onclick="document.querySelector('#quiet').click();">退出登录</button>
+            <form action="PHP/exit.php" method="post" style="display: none;">
+                <input type="submit" value="退出登录" id="quiet" class="button" name="submit">
+            </form>
+            <!-- 底部版权 -->
+            <div class="copyright" style="z-index: 10001;">
+                <a href="https://www.soting.fun/MOBILE/M_index.html">Copyright © 2021 soting.fun SiTomg</a>
+            </div>
+        </div>
+
+        <!-- 注册栏 -->
+        <section class="register">
+            <form action="PHP/register.php" method="post">
+                <div class="tiShi">
+                    <h1>填写注册信息</h1>
+                    <h3 class="toLogin"><a href="#">登录</a></h3>
+                </div>
+                <input type="text" placeholder="用户名(20长度之内)" name="username" required
+                    oninvalid="setCustomValidity('请输入用户名')" oninput="setCustomValidity('')">
+                <input type="email" placeholder="登录邮箱" name="email" required oninvalid="setCustomValidity('请输入登录邮箱')"
+                    oninput="setCustomValidity('')">
+                <input type="password" placeholder="注册密码(6-18位)" name="password" required
+                    oninvalid="setCustomValidity('请输入使用密码')" oninput="setCustomValidity('')">
+                <img src='../IMAGES/close.png' class="eyes" alt="">
+                <div class="more">?</div>
+                <div class="password_more">密码提示：密码需要同时包含字母、数字、特殊字符之一( . ! ? _ )</div>
+
+                <input type="password" placeholder="重复密码" name="pwd" required oninvalid="setCustomValidity('请重复密码')"
+                    oninput="setCustomValidity('')">
+                <img src="../IMAGES/close.png" class="eyesTwo" alt="">
+                <input type="submit" value="注册">
+                <div class="close">
+                    <div></div>
+                    <div></div>
+                </div>
+            </form>
+        </section>
+
+        <!-- 登录栏 -->
+        <section class="login">
+            <form action="PHP/login.php" method="post">
+                <div class="tiShi">
+                    <h1>填写登录信息</h1>
+                    <h3 class="toRegister"><a href="#">注册</a></h3>
+                </div>
+                <input type="email" placeholder="登录邮箱" name="email" required oninvalid="setCustomValidity('请输入登录名')"
+                    oninput="setCustomValidity('')">
+                <input type="password" placeholder="密码" name="password" required oninvalid="setCustomValidity('请输入密码')"
+                    oninput="setCustomValidity('')">
+                <img src='../IMAGES/close.png' class="eyesThree" alt="">
+
+                <input type="submit" value="登录">
+                <div class="close">
+                    <div></div>
+                    <div></div>
+                </div>
+            </form>
+        </section>
+
+        <!-- 个人信息栏 -->
+        <section class="userinfo">
+            <div class="show"><span>用户名：</span><i>...</i></div>
+            <div class="show"><span>邮&ensp;&ensp;箱：</span><i>...</i></div>
+            <div class="show"><span>电&ensp;&ensp;话：</span><i>...</i></div>
+            <div class="show"><span>性&ensp;&ensp;别：</span><i>...</i></div>
+            <div class="show"><span>简&ensp;&ensp;介：</span><i>...</i></div>
+            <button>修改信息</button>
+            <div class="close">
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <!-- 主导航栏 -->
+        <nav>
+            <div class="logo"><img src="../IMAGES/logo.png" alt="SoTing_CARTOON" title="SoTing_CARTOON"></div>
+            <div class="name"><a href="M_index.html">SoTing_CARTOON</a></div>
+            <div class="navbar"><img src="../IMAGES/navbar.png" alt="navbar" title="更多"></div>
+        </nav>
+
+        <!-- 广告、资讯 -->
+        <section class="ad">
+            <div class="content"></div>
+            <div class="close">
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <!-- 主体内容 -->
+        <section class="content">
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="../UPLOADS/0fb48114.jpg" alt="">
+                        <p>结城友奈是勇者</p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+                OVA
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+            <div class="top">
+                剧场版
+            </div>
+            <div class="main_content">
+                <li><a href="#">
+                        <img src="" alt="">
+                        <p></p>
+                    </a></li>
+            </div>
+        </section>
+    </div>
+
+    <script src="JS/M_common.js"></script>
+    <script src="JS/M_index.js"></script>
+    <script src="JS/flexible.js"></script>
+</body>
+
+</html>

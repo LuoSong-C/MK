@@ -1,0 +1,21 @@
+.copyright {
+    width: 98%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    z-index: 10003;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+.copyright a:hover {
+    color: skyblue;
+}
